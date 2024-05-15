@@ -22,6 +22,9 @@ body {
   line-height: 1;
 }
 
+/* ------------------------ */
+/* ACCORDION STYLES */
+/* ------------------------ */
 .accordion {
   width: 80vw;
   margin: 100px auto;
@@ -83,6 +86,97 @@ body {
 }
 .open .hidden-box {
   display: block;
+}
+
+/* ------------------------ */
+/* CAROUSEL STYLES */
+/* ------------------------ */
+.carousel {
+  background-color: #087f5b;
+  width: 90vw;
+  margin: 100px auto;
+  border-radius: 8px;
+  padding: 2.5vw 3vw;
+  padding-left: 8vw;
+  display: flex;
+  align-items: center;
+  gap: 7vw;
+  position: relative;
+}
+.carousel img {
+  height: 200px;
+  border-radius: 8px;
+  width: 20vw;
+  height: auto;
+  transform: scale(1.45);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+.carousel .testimonial-text {
+  font-size: 2vw;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 32px;
+  color: #e6fcf5;
+}
+.carousel .testimonial-author {
+  font-size: 1.8vw;
+  margin-bottom: 4px;
+  color: #c3fae8;
+}
+.carousel .testimonial-job {
+  font-size: 1.5vw;
+  color: #c3fae8;
+}
+.carousel .btn {
+  background-color: #fff;
+  border: none;
+  position: absolute;
+  height: 5vw;
+  width: 5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  top: 50%;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+.carousel .btn-icon {
+  height: 55%;
+  stroke: #087f5b;
+}
+.carousel .btn--left {
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+.carousel .btn--left .btn-icon {
+  transform: translateX(-0.1vw);
+}
+.carousel .btn--right {
+  right: 0;
+  transform: translate(50%, -50%);
+}
+.carousel .btn--right .btn-icon {
+  transform: translateX(0.1vw);
+}
+.carousel .dots {
+  position: absolute;
+  left: 50%;
+  bottom: -3.5vw;
+  transform: translate(-50%, 0);
+  display: flex;
+  gap: 1.5vw;
+}
+.carousel .dots .dot {
+  height: 1.5vw;
+  width: 1.5vw;
+  background-color: #fff;
+  border: 2px solid #087f5b;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.carousel .dots .dot--fill {
+  background-color: #087f5b;
 }
 
 /*# sourceMappingURL=style.css.map */

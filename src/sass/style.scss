@@ -31,6 +31,8 @@ $text-gray-light: #ced4da;
 $white: #fff;
 $gray: #70757a;
 
+$carousel-button-size: 5vw;
+
 * {
   margin: 0;
   padding: 0;
@@ -46,6 +48,10 @@ body {
   font-size: $fz-normal;
   line-height: 1;
 }
+
+/* ------------------------ */
+/* ACCORDION STYLES */
+/* ------------------------ */
 
 .accordion {
   width: 80vw;
@@ -111,5 +117,110 @@ body {
 
   .open & {
     display: block;
+  }
+}
+
+/* ------------------------ */
+/* CAROUSEL STYLES */
+/* ------------------------ */
+
+.carousel {
+  background-color: $primary;
+  width: 90vw;
+  margin: 100px auto;
+  border-radius: 8px;
+  padding: 2.5vw 3vw;
+  padding-left: 8vw;
+  display: flex;
+  align-items: center;
+  gap: 7vw;
+  position: relative;
+
+  img {
+    height: 200px;
+    border-radius: 8px;
+    width: 20vw;
+    height: auto;
+    transform: scale(1.45);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+  }
+
+  .testimonial {
+    &-text {
+      font-size: 2vw;
+      font-weight: $fw-semibold;
+      line-height: 1.5;
+      margin-bottom: 32px;
+      color: $text-primary-0;
+    }
+    &-author {
+      font-size: 1.8vw;
+      margin-bottom: 4px;
+      color: $text-primary-1;
+    }
+    &-job {
+      font-size: 1.5vw;
+      color: $text-primary-1;
+    }
+  }
+
+  .btn {
+    background-color: $white;
+    border: none;
+    position: absolute;
+    height: $carousel-button-size;
+    width: $carousel-button-size;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    top: 50%;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+
+    &-icon {
+      height: 55%;
+      stroke: $primary;
+    }
+
+    &--left {
+      left: 0;
+      transform: translate(-50%, -50%);
+
+      .btn-icon {
+        transform: translateX(-0.1vw);
+      }
+    }
+
+    &--right {
+      right: 0;
+      transform: translate(50%, -50%);
+
+      .btn-icon {
+        transform: translateX(0.1vw);
+      }
+    }
+  }
+
+  .dots {
+    position: absolute;
+    left: 50%;
+    bottom: -3.5vw;
+    transform: translate(-50%, 0);
+    display: flex;
+    gap: 1.5vw;
+
+    .dot {
+      height: 1.5vw;
+      width: 1.5vw;
+      background-color: $white;
+      border: 2px solid $primary;
+      border-radius: 50%;
+      cursor: pointer;
+
+      &--fill {
+        background-color: $primary;
+      }
+    }
   }
 }

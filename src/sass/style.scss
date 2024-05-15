@@ -20,7 +20,7 @@ $fz-h2: 2.5vw;
 //icon size
 $icon-size: 2.8vw;
 
-/* COLORS */
+/* COLORS  Based on: yeun.github.io/open-color/ */
 $primary: #087f5b;
 $primary-light: #099268;
 $text: #343a40;
@@ -30,6 +30,8 @@ $text-gray: #868e96;
 $text-gray-light: #ced4da;
 $white: #fff;
 $gray: #70757a;
+$gray-0: #f8f9fa;
+$gray-2: #e9ecef;
 
 $carousel-button-size: 5vw;
 
@@ -47,6 +49,8 @@ body {
   color: $text;
   font-size: $fz-normal;
   line-height: 1;
+  display: flex;
+  justify-content: center;
 }
 
 /* ------------------------ */
@@ -220,6 +224,44 @@ body {
 
       &--fill {
         background-color: $primary;
+      }
+    }
+  }
+}
+
+/* ------------------------ */
+/* TABLE STYLES */
+/* ------------------------ */
+
+table {
+  width: 90vw;
+  margin-top: 100px;
+  // border: 1px solid $primary;
+  border-collapse: collapse;
+  font-size: 1.8vw;
+
+  th,
+  td {
+    // border: 1px solid $primary;
+    padding: 2vw 4vw;
+    text-align: left;
+  }
+
+  thead {
+    th {
+      background-color: $primary;
+      color: $white;
+      width: 25%;
+    }
+  }
+
+  tbody {
+    tr {
+      &:nth-child(odd) {
+        background-color: $gray-0;
+      }
+      &:nth-child(even) {
+        background-color: $gray-2;
       }
     }
   }

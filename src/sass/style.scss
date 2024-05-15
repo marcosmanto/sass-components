@@ -10,6 +10,7 @@ $ff-sans: "Inter", sans-serif;
 
 // font-weights
 $fw-regular: 400;
+$fw-semibold-500: 500;
 $fw-semibold: 600;
 $fw-bold: 700;
 
@@ -34,6 +35,7 @@ $gray-0: #f8f9fa;
 $gray-2: #e9ecef;
 
 $carousel-button-size: 5vw;
+$pagination-button-size: 4vw;
 
 * {
   margin: 0;
@@ -263,6 +265,68 @@ table {
       &:nth-child(even) {
         background-color: $gray-2;
       }
+    }
+  }
+}
+
+/* ------------------------ */
+/* PAGINATION STYLES */
+/* ------------------------ */
+
+.pagination {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80vw;
+
+  .btn {
+    font-size: 2vw;
+    background-color: $white;
+    border: none;
+    height: $pagination-button-size;
+    width: $pagination-button-size;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &-icon {
+      height: 55%;
+      stroke: $primary;
+    }
+
+    &--left {
+      .btn-icon {
+        transform: translateX(-0.1vw);
+      }
+    }
+
+    &--right {
+      .btn-icon {
+        transform: translateX(0.1vw);
+      }
+    }
+
+    &--selected,
+    &:hover {
+      background-color: $primary;
+      color: $white;
+      svg {
+        stroke: $white;
+      }
+    }
+
+    &--ellipsis {
+      pointer-events: none;
+    }
+
+    &:first-child,
+    &:last-child {
+      border: 1px solid $primary;
+      height: $carousel-button-size;
+      width: $carousel-button-size;
     }
   }
 }
